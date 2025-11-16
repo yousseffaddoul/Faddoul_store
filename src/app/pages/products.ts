@@ -106,6 +106,7 @@ interface Product {
             </div>
             <button (click)="removeFromCart(item)" class="text-red-500 hover:text-red-700 font-bold">&times;</button>
           </div>
+          
 
           <!-- Checkout Button -->
            <div class="mt-4">
