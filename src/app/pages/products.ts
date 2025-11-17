@@ -227,6 +227,17 @@ export class ProductsComponent {
       category: 'Photography',
       image: 'https://m.media-amazon.com/images/I/71VYn4UveNL._AC_SL1500_.jpg',
       affiliateLink: 'https://amzn.to/4oKYIIz'
+    },
+     {
+      id: 4,
+      name: 'PS5',
+      price: 419.93,
+      originalPrice: 1499.99,
+      rating: 4,
+      reviews: 64,
+      category: 'Photography',
+      image: 'https://m.media-amazon.com/images/I/51fM0CKG+HL._SL1500_.jpg',
+      affiliateLink: 'https://amzn.to/3LKZgPV'
     }
     // Add affiliateLink to your other products if needed
   ];
