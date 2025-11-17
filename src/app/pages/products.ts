@@ -226,7 +226,7 @@ export class ProductsComponent {
       reviews: 64,
       category: 'Photography',
       image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrGEKSqlHRT60y4se5VJai1Qqu54iR-Bba0g&s',
-      affiliateLink: 'https://amzn.to/3M6986P'
+      affiliateLink: 'https://amzn.to/4oKYIIz'
     }
     // Add affiliateLink to your other products if needed
   ];
