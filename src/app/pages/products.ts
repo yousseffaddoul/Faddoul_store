@@ -209,13 +209,13 @@ export class ProductsComponent {
     },
     {
       id: 2,
-      name: 'Smart Watch Pro',
-      price: 299.99,
+      name: 'Tree balls for Christmas',
+      price: 11.99,
       rating: 5,
       reviews: 86,
       category: 'Wearables',
-      image: 'https://cdn-img.oraimo.com/fit-in/600x600/NG/product/2024/09/27/OSW-811H-black.png',
-      affiliateLink: 'https://amzn.to/3M6986P'
+      image: 'https://m.media-amazon.com/images/I/81OOT7p2lyL._AC_SL1500_.jpg',
+      affiliateLink: 'https://amzn.to/3XAHNMA'
     },
     {
       id: 3,
