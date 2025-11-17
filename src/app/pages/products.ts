@@ -204,7 +204,7 @@ export class ProductsComponent {
       rating: 5,
       reviews: 128,
       category: 'Electronics',
-      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT77bFvbLyCEXMBn8bMTWB9Vzhupw_Dd9rA5w&s',
+      image: 'https://m.media-amazon.com/images/I/71ALQEcyxeL._AC_SL1500_.jpg',
       affiliateLink: 'https://amzn.to/3M6986P'
     },
     {
