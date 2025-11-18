@@ -325,7 +325,7 @@ goToAmazon(product: Product) {
     'service_4he2lwd',
     'template_mzh67af',
     {
-      user_email: "YOUR_EMAIL_HERE",   // ⭐ PUT YOUR EMAIL
+      user_email: this.customerEmail,   // ⭐ PUT YOUR EMAIL
       order_items: product.name,
       total: this.formatPrice(product.price),
       customer_email: this.customerEmail
