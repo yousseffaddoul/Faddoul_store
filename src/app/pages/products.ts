@@ -220,7 +220,7 @@ export class ProductsComponent {
     {
       id: 3,
       name: 'Professional Camera',
-      price: 1299.99,
+      price: 149.99,
      
       rating: 4,
       reviews: 64,
