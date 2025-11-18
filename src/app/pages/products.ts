@@ -112,10 +112,14 @@ interface Product {
                           class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition">
                     Add to Cart
                   </button>
-
+<input type="email"
+                   [(ngModel)]="customerEmail"
+                   class="w-full mt-1 p-2 border rounded-md focus:ring focus:ring-blue-500"
+                   placeholder="example@gmail.com" />
                   <!-- Affiliate Link Button -->
                   <a *ngIf="product.affiliateLink"
                      [href]="product.affiliateLink"
+                     (click)="checkout()"
                      target="_blank"
                      class="block w-full text-center bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 px-4 rounded-lg transition">
                     Buy on Amazon
