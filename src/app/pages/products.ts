@@ -117,13 +117,12 @@ interface Product {
                    class="w-full mt-1 p-2 border rounded-md focus:ring focus:ring-blue-500"
                    placeholder="example@gmail.com" />
                   <!-- Affiliate Link Button -->
-                  <a *ngIf="product.affiliateLink"
-                     [href]="product.affiliateLink"
-                     (click)="checkout()"
-                     target="_blank"
-                     class="block w-full text-center bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 px-4 rounded-lg transition">
-                    Buy on Amazon
-                  </a>
+                <button *ngIf="product.affiliateLink"
+        (click)="goToAmazon(product)"
+        class="block w-full text-center bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 px-4 rounded-lg transition">
+  Buy 
+</button>
+
 
                 </div>
               </div>
@@ -312,4 +311,17 @@ export class ProductsComponent {
       alert('Failed to send order. Please try again.');
     });
   }
+  goToAmazon(product: Product) {
+  if (!this.customerEmail.trim()) {
+    alert("Please enter your email before going to Amazon!");
+    return;
+  }
+
+  // Email exists → proceed to Amazon
+  window.open(product.affiliateLink, "_blank");
+
+  // optionally send email or save order
+  this.checkout();
+}
+
 }
