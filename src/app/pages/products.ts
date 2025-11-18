@@ -198,9 +198,9 @@ export class ProductsComponent {
   allProducts: Product[] = [
     {
       id: 1,
-      name: 'Premium Wireless Headphones',
-      price: 199.99,
-      originalPrice: 249.99,
+      name: 'Premium TV',
+      price: 49.99,
+     
       rating: 5,
       reviews: 128,
       category: 'Electronics',
@@ -221,7 +221,7 @@ export class ProductsComponent {
       id: 3,
       name: 'Professional Camera',
       price: 1299.99,
-      originalPrice: 1499.99,
+     
       rating: 4,
       reviews: 64,
       category: 'Photography',
@@ -232,7 +232,7 @@ export class ProductsComponent {
       id: 4,
       name: 'PS5',
       price: 419.93,
-      originalPrice: 1499.99,
+      
       rating: 4,
       reviews: 64,
       category: 'Photography',
