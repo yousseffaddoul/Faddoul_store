@@ -209,7 +209,7 @@ export class ProductsComponent {
     },
     {
       id: 2,
-      name: 'Tree balls for Christmas',
+      name: '56 piece Tree balls for Christmas',
       price: 11.99,
       rating: 5,
       reviews: 86,
