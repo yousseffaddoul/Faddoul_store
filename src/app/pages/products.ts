@@ -276,52 +276,73 @@ export class ProductsComponent {
     return this.orders.reduce((sum, p) => sum + p.price, 0);
   }
 
-  checkout() {
-    if (!this.customerEmail.trim()) {
-      alert("Please enter your email before checkout!");
-      return;
-    }
-
-    if (this.orders.length === 0) {
-      alert('Your cart is empty!');
-      return;
-    }
-
-    const orderDetails = this.orders
-      .map(o => `${o.name} - ${this.formatPrice(o.price)}`)
-      .join('\n');
-
-    emailjs.send(
-      'service_4he2lwd',
-      'template_mzh67af',
-      {
-        user_email: this.customerEmail,
-        order_items: orderDetails,
-        total: this.formatPrice(this.totalPrice())
-      },
-      'Uhk2tV_iOwFev25Qa'
-    )
-    .then(() => {
-      alert('Order sent successfully to ' + this.customerEmail);
-      this.orders = [];
-      this.customerEmail = '';
-    })
-    .catch(err => {
-      console.error('EmailJS error:', err);
-      alert('Failed to send order. Please try again.');
-    });
+ checkout() {
+  if (!this.customerEmail.trim()) {
+    alert("Please enter your email before checkout!");
+    return;
   }
-  goToAmazon(product: Product) {
+
+  if (this.orders.length === 0) {
+    alert('Your cart is empty!');
+    return;
+  }
+
+  const orderDetails = this.orders
+    .map(o => `${o.name} - ${this.formatPrice(o.price)}`)
+    .join('\n');
+
+  emailjs.send(
+    'service_4he2lwd',
+    'template_mzh67af',
+    {
+      user_email: this.customerEmail,
+      order_items: orderDetails,
+      total: this.formatPrice(this.totalPrice())
+    },
+    'Uhk2tV_iOwFev25Qa'
+  )
+  .then(() => {
+    alert('Order sent successfully to ' + this.customerEmail);
+    this.orders = [];
+    this.customerEmail = '';
+  })
+  .catch(err => {
+    console.error('EmailJS error:', err);
+    alert('Failed to send order. Please try again.');
+  });
+}
+
+
+// ⭐ FINAL CORRECT AMAZON FUNCTION
+goToAmazon(product: Product) {
   if (!this.customerEmail.trim()) {
     alert("Please enter your email before going to Amazon!");
     return;
   }
 
-  // Email exists → proceed to Amazon
-  window.open(product.affiliateLink, "_blank");
+  // Send email to YOU (admin)
+  emailjs.send(
+    'service_4he2lwd',
+    'template_mzh67af',
+    {
+      user_email: "YOUR_EMAIL_HERE",   // ⭐ PUT YOUR EMAIL
+      order_items: product.name,
+      total: this.formatPrice(product.price),
+      customer_email: this.customerEmail
+    },
+    'Uhk2tV_iOwFev25Qa'
+  )
+  .then(() => {
+    console.log("Admin notified of Amazon click:", product.name);
+  })
+  .catch(err => {
+    console.error("EmailJS error:", err);
+  });
 
-  // optionally send email or save order
-  this.checkout();
+  // Open Amazon product page AFTER email trigger
+  window.open(product.affiliateLink, "_blank");
 }
+
+
 
 }
