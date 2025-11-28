@@ -241,6 +241,17 @@ export class ProductsComponent {
       category: 'Photography',
       image: 'https://m.media-amazon.com/images/I/51fM0CKG+HL._SL1500_.jpg',
       affiliateLink: 'https://amzn.to/3LKZgPV'
+    },
+     {
+      id: 5,
+      name: 'BEAKEY Makeup Brushes Set',
+      price: 7.58,
+      
+      rating: 4,
+      reviews: 64,
+      category: 'Photography',
+      image: 'https://m.media-amazon.com/images/I/71BFkreZhrL._SX679_.jpg',
+      affiliateLink: 'https://amzn.to/4iJVxPb'
     }
     // Add affiliateLink to your other products if needed
   ];
